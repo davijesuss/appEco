@@ -1,25 +1,16 @@
-import { extendTheme } from "native-base";
+import { extendTheme } from 'native-base'
 
 export const TEMAS = extendTheme({
     colors: {
-        degradeAzulClaro: {
-            50 : "#11999E",
-            500: "#6DECB9"
+        gray: {
+            300: '#8D8D99'
         },
-        degradeAzulForte: {
-           50 : "#0C7CBA " 
+        blue: {
+            500: '#339CFF',
+            800: '#0B3B60'
         },
-        degradeVerde: {
-            50 : "#6C8800"
-        },
-        degradeVermelho: {
-            50 : "#C92D39"
-        },
-        degradeMarron: {
-            50 : "#975713"
-        },
-        branco: '#fff',
-        preto: '#000'
+        white: '#fff',
+        black: '#000'
     },
     fontSizes: {
         xs: 12,
@@ -28,4 +19,5 @@ export const TEMAS = extendTheme({
         lg: 20,
         xl: 24
     }
+
 })
