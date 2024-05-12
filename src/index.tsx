@@ -59,14 +59,11 @@ export default function Principal() {
       <Text color='white' mt={2}>
         {secoes[numSecao].texto}
       </Text>
-      <View style={{ position: 'relative', flexDirection: 'row' }}>
-        <Pressable onPress={avancarSecao} style={{ position: 'absolute', bottom: 30, right: 30 }}>
+      <View style={{ position: 'relative', flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, paddingBottom: 20 }}>
+        <Pressable onPress={avancarSecao} style={{ position: 'absolute', bottom: -200, left: 170 }}>
           <Image source={ SetaDireita} alt='seta para direita' />
         </Pressable>
-        <Pressable onPress={voltarSecao} style={{ position: 'absolute', bottom: 30, left: 30 }}>
-          <Image source={SetaEsquerda} alt='seta para esquerda' />
-        </Pressable>
-        <Pressable onPress={voltarSecao} style={{ position: 'absolute', bottom: 30, left: 30 }}>
+        <Pressable onPress={voltarSecao} style={{ position: 'absolute', bottom: -200, right: 170 }}>
           <Image source={SetaEsquerda} alt='seta para esquerda' />
         </Pressable>
       </View>
