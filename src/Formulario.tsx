@@ -3,13 +3,13 @@ import { VStack, Box, Text, Button, Pressable, Heading, Image } from 'native-bas
 import SetaDireita from './assets/Circulo_Link_Direita.png';
 import SetaEsquerda from './assets/Circulo_Link_Esquerda.png';
 import Background from './style/Background';
-import {perguntas} from './utils/formsElementos'
+import { perguntasJSON } from './planilha/leitor-de-perguntas-csv';
 
 export default function Formulario() {
     const [questionIndex, setQuestionIndex] = useState(0); // Índice da pergunta atual
   
     function avancarPergunta() {
-      if (questionIndex < perguntas.length - 1) {
+      if (questionIndex < perguntasJSON.length - 1) {
         setQuestionIndex(questionIndex + 1);
       }
     }
@@ -23,9 +23,9 @@ export default function Formulario() {
     return (
       <VStack style={Background.containerAzul} alignItems="center" justifyContent="center" p={5}>
         <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width="100%" height="40%" justifyContent="center" alignItems="center">
-          <Heading size="md" mb={3} color={'#0C7CBA'}>{perguntas[questionIndex].titulo}</Heading>
+          <Heading size="md" mb={3} color={'#0C7CBA'}>{perguntasJSON[questionIndex].id}</Heading>
           <Text fontSize="sm" mb={4} mt={4}>
-            {perguntas[questionIndex].descricao}
+            {perguntasJSON[questionIndex].pergunta}
           </Text>
         </Box>
         <Box mt={5} borderRadius="lg" maxWidth="90%" width="100%">
@@ -48,7 +48,3 @@ export default function Formulario() {
     );
   }
   
-
-
-
-
