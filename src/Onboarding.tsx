@@ -52,14 +52,14 @@ export default function Onboarding({ navigation }) {
           Começar
         </Button>
       )}
-     <View style={{ position: 'relative', flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, paddingBottom: 0 }}>
-        <Pressable onPress={avancarSecao} style={{ position: 'absolute', bottom: -200, left: 170 }}>
-          <Image source={ SetaDireita} alt='seta para direita' />
-        </Pressable>
-        <Pressable onPress={voltarSecao} style={{ position: 'absolute', bottom: -200, right: 170 }}>
-          <Image source={SetaEsquerda} alt='seta para esquerda' />
-        </Pressable>
-      </View>
+      <VStack position="absolute" bottom={5} width="100%" px={5} flexDirection="row" justifyContent="space-between">
+                <Pressable onPress={voltarSecao}>
+                    <Image source={SetaEsquerda} alt="Voltar" />
+                </Pressable> 
+                <Pressable onPress={avancarSecao}>
+                    <Image source={SetaDireita} alt="Avançar" />
+                </Pressable>
+            </VStack>
     </VStack>
   );
 }
