@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
 import { VStack, Box, Text, Button, Pressable, Heading, Image } from 'native-base';
 import SetaDireita from './assets/Circulo_Link_Direita.png';
 import SetaEsquerda from './assets/Circulo_Link_Esquerda.png';
 import Background from './style/Background';
 import data from './utils/data.json'; // Importe os dados da planilha
+import CustomModal from './modal/modalForms';
 
 export default function Formulario() {
     const [questionIndex, setQuestionIndex] = useState(0); // Índice da pergunta atual
     const [totalPoints, setTotalPoints] = useState(0); // Pontos acumulados
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const toggleModal = () => {
+        setModalVisible(!modalVisible);
+    };
 
     function avancarPergunta() {
         if (questionIndex < data.length - 1) {
@@ -36,12 +43,17 @@ export default function Formulario() {
                 <Text fontSize="sm" mb={4} mt={4}>
                     {data[questionIndex].pergunta}
                 </Text>
+                <Button onPress={toggleModal}>
+                <Ionicons name="information-circle-outline" size={24} color="black" />
+                </Button>
+            <CustomModal visible={modalVisible} onClose={toggleModal} id={data[questionIndex].id} />
+
             </Box>
             <Box mt={5} borderRadius="lg" maxWidth="90%" width="100%">
                 <Button style={Background.roundedButton} mb={2} onPress={() => handleAnswer(true)}>
                     <Text style={{ color: 'black' }}>Sim</Text>
                 </Button>
-                <Button mt={2} style={{...Background.roundedButton, backgroundColor: 'white'} } onPress={() => handleAnswer(false)}>
+                <Button mt={2} style={{ ...Background.roundedButton, backgroundColor: 'white' }} onPress={() => handleAnswer(false)}>
                     <Text style={{ color: 'black' }}>Não</Text>
                 </Button>
             </Box>
@@ -57,6 +69,7 @@ export default function Formulario() {
             <Box mt={5}>
                 <Text fontSize="lg" color="white">Pontos Acumulados: {totalPoints}</Text>
             </Box>
+           
         </VStack>
     );
 }
