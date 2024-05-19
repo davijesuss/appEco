@@ -70,10 +70,12 @@ export default function Formulario() {
 
             </Box>
             <Box mt={5} borderRadius="lg" maxWidth="90%" width="100%">
-                <Button style={Background.roundedButton} mb={2} onPress={() => handleAnswer(true)}>
+                <Button style={Background.roundedButton} mb={2} onPress={() => handleAnswer(true)} onPress={() => handleAnswer(true)}
+                    isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Sim</Text>
                 </Button>
-                <Button mt={2} style={{ ...Background.roundedButton, backgroundColor: 'white' }} onPress={() => handleAnswer(false)}>
+                <Button mt={2} style={{ ...Background.roundedButton, backgroundColor: 'white' }} onPress={() => handleAnswer(false)} 
+                    isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Não</Text>
                 </Button>
             </Box>
