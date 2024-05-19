@@ -39,7 +39,7 @@ export default function Formulario() {
     return (
         <VStack style={Background.containerAzul} alignItems="center" justifyContent="center" p={5}>
             <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width="100%" height="40%" justifyContent="center" alignItems="center">
-                <Heading size="md" mb={3} color={'#0C7CBA'}>{data[questionIndex].id}</Heading>
+                <Heading size="sm" mb={3} color={'#0C7CBA'}>{data[questionIndex].categoria}</Heading>
                 <Text fontSize="sm" mb={4} mt={4}>
                     {data[questionIndex].pergunta}
                 </Text>
