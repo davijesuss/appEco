@@ -7,9 +7,16 @@ import Background from './style/Background';
 import data from './utils/data.json'; // Importe os dados da planilha
 import CustomModal from './modal/modalForms';
 
+
+//chave | valor para a pontuação
+const STORAGE_POINT = '@ponto';
+//chave | valor para a resposta
+const STORAGE_ANSWERS = '@answers';
+
 export default function Formulario() {
     const [questionIndex, setQuestionIndex] = useState(0); // Índice da pergunta atual
     const [totalPoints, setTotalPoints] = useState(0); // Pontos acumulados
+    const [answers, setAnswers] = useState([]); // Respostas armazenadas
     const [modalVisible, setModalVisible] = useState(false);
 
     const toggleModal = () => {
@@ -22,17 +29,30 @@ export default function Formulario() {
         }
     }
 
-    function voltarPergunta() {
+    const voltarPergunta = () => {
         if (questionIndex > 0) {
-            setQuestionIndex(questionIndex - 1);
+              const previousIndex = questionIndex - 1;
+              const previousAnswer = answers[previousIndex];
+  
+              if (previousAnswer && previousAnswer.isYes) {
+                  const previousPoints = parseInt(data[previousIndex].pontos);
+                  setTotalPoints(totalPoints - previousPoints);
+              }
+  
+              setQuestionIndex(previousIndex);
         }
-    }
+    };
 
     function handleAnswer(isYes) {
         const currentPoints = parseInt(data[questionIndex].pontos);
         if (isYes) {
             setTotalPoints(totalPoints + currentPoints);
         }
+        const newAnswers = [...answers];
+        newAnswers[questionIndex] = { isYes };
+        setAnswers(newAnswers);
+
+      avancarPergunta();
         avancarPergunta();
     }
 
