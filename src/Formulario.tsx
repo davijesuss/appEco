@@ -8,7 +8,6 @@ import data from './utils/data.json'; // Importe os dados da planilha
 import CustomModal from './modal/modalForms';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-
 //chave | valor para a pontuação
 const STORAGE_POINT = '@ponto';
 //chave | valor para a resposta
@@ -20,14 +19,12 @@ export default function Formulario() {
     const [answers, setAnswers] = useState([]); // Respostas armazenadas
     const [modalVisible, setModalVisible] = useState(false);
 
-
     useEffect(() => {
-        limparDados();
         recuperarDados();
     }, []);
     
     useEffect(() => {
-      armazenarDados();
+        armazenarDados();
     }, [totalPoints, answers, questionIndex]);
 
     //recuperando dados com armazenamento local com async-storage
@@ -82,15 +79,15 @@ export default function Formulario() {
 
     const voltarPergunta = () => {
         if (questionIndex > 0) {
-              const previousIndex = questionIndex - 1;
-              const previousAnswer = answers[previousIndex];
-  
-              if (previousAnswer && previousAnswer.isYes) {
-                  const previousPoints = parseInt(data[previousIndex].pontos);
-                  setTotalPoints(totalPoints - previousPoints);
-              }
-  
-              setQuestionIndex(previousIndex);
+            const previousIndex = questionIndex - 1;
+            const previousAnswer = answers[previousIndex];
+
+            if (previousAnswer && previousAnswer.isYes) {
+                const previousPoints = parseInt(data[previousIndex].pontos);
+                setTotalPoints(totalPoints - previousPoints);
+            }
+
+            setQuestionIndex(previousIndex);
         }
     };
 
@@ -103,30 +100,31 @@ export default function Formulario() {
         newAnswers[questionIndex] = { isYes };
         setAnswers(newAnswers);
 
-      avancarPergunta();
         avancarPergunta();
     }
 
+    const getBackgroundColor = () => {
+        const color = data[questionIndex]?.cor || '0C7CBAFF';
+        return #${color.substring(0, 6)}; // Remover alpha se presente
+    };
+
     return (
-        <VStack style={Background.containerAzul} alignItems="center" justifyContent="center" p={5}>
+        <VStack style={[Background.containerAzul, { backgroundColor: getBackgroundColor() }]} alignItems="center" justifyContent="center" p={5}>
             <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width="100%" height="40%" justifyContent="center" alignItems="center">
                 <Heading size="sm" mb={3} color={'#0C7CBA'}>{data[questionIndex].categoria}</Heading>
                 <Text fontSize="sm" mb={4} mt={4}>
                     {data[questionIndex].pergunta}
                 </Text>
                 <Button onPress={toggleModal}>
-                <Ionicons name="information-circle-outline" size={24} color="black" />
+                    <Ionicons name="information-circle-outline" size={24} color="black" />
                 </Button>
-            <CustomModal visible={modalVisible} onClose={toggleModal} id={data[questionIndex].id} />
-
+                <CustomModal visible={modalVisible} onClose={toggleModal} id={data[questionIndex].id} />
             </Box>
             <Box mt={5} borderRadius="lg" maxWidth="90%" width="100%">
-                <Button style={Background.roundedButton} mb={2} onPress={() => handleAnswer(true)}
-                    isDisabled={questionIndex === data.length - 1}>
+                <Button style={Background.roundedButton} mb={2} onPress={() => handleAnswer(true)} isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Sim</Text>
                 </Button>
-                <Button mt={2} style={{ ...Background.roundedButton, backgroundColor: 'white' }} onPress={() => handleAnswer(false)} 
-                    isDisabled={questionIndex === data.length - 1}>
+                <Button mt={2} style={{ ...Background.roundedButton, backgroundColor: 'white' }} onPress={() => handleAnswer(false)} isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Não</Text>
                 </Button>
             </Box>
@@ -142,7 +140,6 @@ export default function Formulario() {
             <Box mt={5}>
                 <Text fontSize="lg" color="white">Pontos Acumulados: {totalPoints}</Text>
             </Box>
-           
         </VStack>
     );
 }
