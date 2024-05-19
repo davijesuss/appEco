@@ -53,7 +53,7 @@ export default function Onboarding({ navigation }) {
         </Button>
       )}
      <View style={{ position: 'relative', flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, paddingBottom: 0 }}>
-        <Pressable onPress={avancarSecao} style={{ position: 'absolute', bottom: -200, left: 170 }}>
+        <Pressable onPress={avancarSecao} style={{ position: 'absolute', bottom: -100, left: 170 }}>
           <Image source={ SetaDireita} alt='seta para direita' />
         </Pressable>
         <Pressable onPress={voltarSecao} style={{ position: 'absolute', bottom: -200, right: 170 }}>
