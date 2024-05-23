@@ -20,6 +20,7 @@ export default function Formulario() {
     const [modalVisible, setModalVisible] = useState(false);
 
     useEffect(() => {
+        limparDados();
         recuperarDados();
     }, []);
     
@@ -104,9 +105,10 @@ export default function Formulario() {
     }
 
     const getBackgroundColor = () => {
-        const color = data[questionIndex]?.cor || '0C7CBAFF';
-        return #${color.substring(0, 6)}; // Remover alpha se presente
+        const color = data[questionIndex]?.cor || '0C7CBA';
+        return `#${color.substring(0, 6)}`; // Remover alpha se presente
     };
+    
 
     return (
         <VStack style={[Background.containerAzul, { backgroundColor: getBackgroundColor() }]} alignItems="center" justifyContent="center" p={5}>
@@ -129,10 +131,10 @@ export default function Formulario() {
                 </Button>
             </Box>
             <VStack position="absolute" bottom={5} width="100%" px={5} flexDirection="row" justifyContent="space-between">
-                <Pressable onPress={voltarPergunta}>
+                <Pressable onPress={voltarPergunta} isDisabled={questionIndex === 0}>
                     <Image source={SetaEsquerda} alt="Voltar" />
                 </Pressable>
-                <Pressable onPress={avancarPergunta}>
+                <Pressable onPress={avancarPergunta} isDisabled={questionIndex === data.length - 1}>
                     <Image source={SetaDireita} alt="Avançar" />
                 </Pressable>
             </VStack>
