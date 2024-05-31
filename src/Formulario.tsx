@@ -85,7 +85,7 @@ export default function Formulario() {
 
             if (previousAnswer && previousAnswer.isYes) {
                 const previousPoints = parseInt(data[previousIndex].pontos);
-                setTotalPoints(totalPoints - previousPoints);
+                setTotalPoints(prevPoints => Math.max(0, prevPoints - previousPoints));
             }
 
             setQuestionIndex(previousIndex);
