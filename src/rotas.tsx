@@ -5,7 +5,7 @@ import { createNativeStackNavigator} from '@react-navigation/native-stack'
 const Tab = createNativeStackNavigator();
 
 import Onboarding from "./Onboarding"
-import Fromulario from "./Formulario"
+import Formulario from "./Formulario"
 
 export default function Rotas(){
     return(
@@ -15,7 +15,7 @@ export default function Rotas(){
                     name="Onboarding" component={Onboarding} options={{headerShown: false}}
                 />
                 <Tab.Screen
-                    name="Fromulario" component={Fromulario} options={{headerShown: false}}
+                    name="Formulario" component={Formulario} options={{headerShown: false}}
                 />
             </Tab.Navigator>
         </NavigationContainer>
