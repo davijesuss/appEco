@@ -59,7 +59,7 @@ export default function Onboarding({ navigation }) {
         </Flex>
       )}
      {numSecao === 4 && (
-        <Button onPress={() => navigation.navigate('Fromulario')} // Modificado para navegar para a próxima tela
+        <Button onPress={() => navigation.navigate('Formulario')} // Modificado para navegar para a próxima tela
           colorScheme="cyan" mt="4" px="8" py="3" borderRadius="lg">
           Começar
         </Button>
