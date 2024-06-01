@@ -112,7 +112,7 @@ export default function Formulario() {
 
     return (
         <VStack style={[Background.containerAzul, { backgroundColor: getBackgroundColor() }]} alignItems="center" justifyContent="center" p={5}>
-            <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width="100%" height="40%" justifyContent="center" alignItems="center">
+            <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width={{base:"95%",md:"85%",lg:"70%"}} height="auto" justifyContent="center" alignItems="center">
                 <Heading size="sm" mb={3} color={'#0C7CBA'}>{data[questionIndex].categoria}</Heading>
                 <Text fontSize="sm" mb={4} mt={4}>
                     {data[questionIndex].pergunta}
@@ -126,11 +126,11 @@ export default function Formulario() {
                 <Button style={Background.roundedButton} mb={2} onPress={() => handleAnswer(true)} isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Sim</Text>
                 </Button>
-                <Button mt={2} style={{ ...Background.roundedButton, backgroundColor: 'white' }} onPress={() => handleAnswer(false)} isDisabled={questionIndex === data.length - 1}>
+                <Button mt={2} style={{ ...Background.roundedButton,}} onPress={() => handleAnswer(false)} isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Não</Text>
                 </Button>
             </Box>
-            <VStack position="absolute" bottom={5} width="100%" px={5} flexDirection="row" justifyContent="space-between">
+            <VStack style={{ overflow: 'hidden', position: 'absolute', bottom: 20, right: 20, backgroundColor: 'transparent' }} flexDirection="row" justifyContent="space-between" width="100%" px={5}>
                 <Pressable onPress={voltarPergunta} isDisabled={questionIndex === 0}>
                     <Image source={SetaEsquerda} alt="Voltar" />
                 </Pressable>
