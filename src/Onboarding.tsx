@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { VStack, Text, Image, Pressable, Button, Flex } from 'native-base';
+import { VStack, Text,Image, Pressable, Button, Flex } from 'native-base';
 import { Dimensions } from 'react-native';
 import SetaDireita from './assets/Circulo_Link_Direita.png';
 import SetaEsquerda from './assets/Circulo_Link_Esquerda.png';
@@ -39,11 +39,18 @@ export default function Onboarding({ navigation }) {
       {secoes[numSecao].categorias && (
         <Flex direction="row" wrap="wrap" justifyContent="center">
           {secoes[numSecao].categorias.map((categoria, index) => (
-            <Button key={index} onPress={categoria.acao} m={1} colorScheme="emerald" px="5" py="1"
-              borderRadius="full" // Esta linha adiciona bordas arredondadas
+            <Button
+              key={index}
+              onPress={categoria.acao}
+              m={1}
+              colorScheme="emerald"
+              px="5"
+              py="1"
+              borderRadius="full"
               style={{
-                width: buttonWidth, // Define a largura para manter 3 botões por linha em retrato e 5 em paisagem
-                marginBottom: index >= 6 ? 0 : 2 // Remove a margem inferior na última linha
+                width: buttonWidth,
+                marginBottom: index >= 6 ? 0 : 2,
+                backgroundColor: categoria.style.backgroundColor,
               }}
             >
               {categoria.nome}
@@ -51,12 +58,13 @@ export default function Onboarding({ navigation }) {
           ))}
         </Flex>
       )}
-      {numSecao === 4 && (
-        <Button onPress={() => navigation.navigate('Formulario')} // Corrigido para "Formulario"
+     {numSecao === 4 && (
+        <Button onPress={() => navigation.navigate('Fromulario')} // Modificado para navegar para a próxima tela
           colorScheme="cyan" mt="4" px="8" py="3" borderRadius="lg">
           Começar
         </Button>
       )}
+
       <Pressable onPress={voltarSecao} style={{ overflow: 'hidden', position: 'absolute', bottom: 20, left: 20, backgroundColor: 'transparent' }}>
         <Image source={SetaEsquerda} alt="Voltar" />
       </Pressable>
