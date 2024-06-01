@@ -8,15 +8,13 @@ import data from './utils/data.json'; // Importe os dados da planilha
 import CustomModal from './modal/modalForms';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-//chave | valor para a pontuação
 const STORAGE_POINT = '@ponto';
-//chave | valor para a resposta
 const STORAGE_ANSWERS = '@answers';
 
 export default function Formulario() {
-    const [questionIndex, setQuestionIndex] = useState(0); // Índice da pergunta atual
-    const [totalPoints, setTotalPoints] = useState(0); // Pontos acumulados
-    const [answers, setAnswers] = useState([]); // Respostas armazenadas
+    const [questionIndex, setQuestionIndex] = useState(0);
+    const [totalPoints, setTotalPoints] = useState(0);
+    const [answers, setAnswers] = useState([]);
     const [modalVisible, setModalVisible] = useState(false);
 
     useEffect(() => {
@@ -28,7 +26,6 @@ export default function Formulario() {
         armazenarDados();
     }, [totalPoints, answers, questionIndex]);
 
-    //recuperando dados com armazenamento local com async-storage
     const recuperarDados = async () => {
         try {
             const pontosRecuperados = await AsyncStorage.getItem(STORAGE_POINT);
@@ -44,7 +41,6 @@ export default function Formulario() {
         }
     };
 
-    //armazenando dados com armazenamento local com async-storage
     const armazenarDados = async () => {
         try {
             await AsyncStorage.setItem(STORAGE_POINT, totalPoints.toString());
@@ -55,7 +51,6 @@ export default function Formulario() {
         }
     };
 
-    //limpando dados com armazenamento local com async-storage
     const limparDados = async () => {
         try {
             await AsyncStorage.removeItem(STORAGE_POINT);
@@ -106,13 +101,12 @@ export default function Formulario() {
 
     const getBackgroundColor = () => {
         const color = data[questionIndex]?.cor || '0C7CBA';
-        return `#${color.substring(0, 6)}`; // Remover alpha se presente
+        return `#${color.substring(0, 6)}`;
     };
     
-
     return (
         <VStack style={[Background.containerAzul, { backgroundColor: getBackgroundColor() }]} alignItems="center" justifyContent="center" p={5}>
-            <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width={{base:"95%",md:"85%",lg:"70%"}} height="auto" justifyContent="center" alignItems="center">
+            <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width={{ base: "95%", md: "85%", lg: "70%" }} height="auto" justifyContent="center" alignItems="center">
                 <Heading size="sm" mb={3} color={'#0C7CBA'}>{data[questionIndex].categoria}</Heading>
                 <Text fontSize="sm" mb={4} mt={4}>
                     {data[questionIndex].pergunta}
@@ -126,7 +120,7 @@ export default function Formulario() {
                 <Button style={Background.roundedButton} mb={2} onPress={() => handleAnswer(true)} isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Sim</Text>
                 </Button>
-                <Button mt={2} style={{ ...Background.roundedButton,}} onPress={() => handleAnswer(false)} isDisabled={questionIndex === data.length - 1}>
+                <Button mt={2} style={{ ...Background.roundedButton }} onPress={() => handleAnswer(false)} isDisabled={questionIndex === data.length - 1}>
                     <Text style={{ color: 'black' }}>Não</Text>
                 </Button>
             </Box>
@@ -138,7 +132,6 @@ export default function Formulario() {
                     <Image source={SetaDireita} alt="Avançar" />
                 </Pressable>
             </VStack>
-            {/* Exibir pontos acumulados */}
             <Box mt={5}>
                 <Text fontSize="lg" color="white">Pontos Acumulados: {totalPoints}</Text>
             </Box>
