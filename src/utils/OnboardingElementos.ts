@@ -21,28 +21,29 @@ const secoes = [
     id: 3,
     titulo: 'Como funciona o Forms ?',
     imagem: CirculoComoFuniona,
-    texto: 'Este questionário tem por objetivo calcular a pontuação que determinado slicitando atende hoje quanto à aplicação dos requisitos do Programa, apresentando ao final a sua pontuação e colocação nos indices de desoneração tributária (Bronze, Prata ou Ouro).',
+    texto: 'Este questionário tem por objetivo calcular a pontuação que determinado solicitante atende hoje quanto à aplicação dos requisitos do Programa, apresentando ao final a sua pontuação e colocação nos índices de desoneração tributária (Bronze, Prata ou Ouro).',
   },
   {
     id: 4,
     titulo: 'Categoria dos Forms',
     imagem: CirculoCategoria,
+
     categorias: [
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 1'), style: { backgroundColor: 'rgba(12, 124, 186, 1)', color: 'white' } },
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 2'), style: { backgroundColor: 'rgba(108, 136, 0, 1)', color: 'white' } },
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 3'), style: { backgroundColor: 'rgba(201, 45, 57, 1)', color: 'white' } },
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 4'), style: { backgroundColor: 'rgba(151, 87, 19, 1)', color: 'white' } },
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 5'), style: { backgroundColor: 'rgba(252, 196, 56, 1)', color: 'white' } },
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 6'), style: { backgroundColor: 'rgba(239, 141, 34, 1)', color: 'white' } },
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 7'), style: { backgroundColor: 'rgba(94, 94, 94, 1)', color: 'white' } },
-      { nome: 'Lorem ipsum', acao: () => console.log('Ação 8'), style: { backgroundColor: 'rgba(75, 90, 194, 1)', color: 'white' } },
+      { nome: 'Gestão Sustentável Águas', acao: () => console.log('Ação 1'), style: { backgroundColor: 'rgba(12, 124, 186, 1)', color: 'white' } },
+      { nome: 'Eficiência Energética', acao: () => console.log('Ação 2'), style: { backgroundColor: 'rgba(108, 136, 0, 1)', color: 'white' } },
+      { nome: 'Projeto Sustentável', acao: () => console.log('Ação 3'), style: { backgroundColor: 'rgba(201, 45, 57, 1)', color: 'white' } },
+      { nome: 'Qualidade Urbana', acao: () => console.log('Ação 4'), style: { backgroundColor: 'rgba(151, 87, 19, 1)', color: 'white' } },
+      { nome: 'Verde Urbano', acao: () => console.log('Ação 5'), style: { backgroundColor: 'rgba(252, 196, 56, 1)', color: 'white' } },
+      { nome: 'Contribuições Ambientais', acao: () => console.log('Ação 6'), style: { backgroundColor: 'rgba(239, 141, 34, 1)', color: 'white' } },
+      { nome: 'Gestão de Resíduos', acao: () => console.log('Ação 7'), style: { backgroundColor: 'rgba(94, 94, 94, 1)', color: 'white' } },
+      { nome: 'Bonificações', acao: () => console.log('Ação 8'), style: { backgroundColor: 'rgba(75, 90, 194, 1)', color: 'white' } },
     ]
   },
   {
     id: 5,
-    titulo: 'Começar o questionario ?',
+    titulo: 'Começar o questionário?',
     imagem: CirculoComeco,
-    botao: () => console.log('Iniciando questionário...'), // Adiciona a ação do botão
+    botao: () => console.log('Iniciando questionário...'),
   },
 ];
 
