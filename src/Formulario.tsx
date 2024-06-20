@@ -16,6 +16,7 @@ export default function Formulario() {
     const [totalPoints, setTotalPoints] = useState(0);
     const [answers, setAnswers] = useState([]);
     const [modalVisible, setModalVisible] = useState(false);
+    const [hasAnsweredCurrentQuestion, setHasAnsweredCurrentQuestion] = useState(false);
 
     useEffect(() => {
         limparDados();
@@ -70,31 +71,33 @@ export default function Formulario() {
     function avancarPergunta() {
         if (questionIndex < data.length - 1) {
             setQuestionIndex(questionIndex + 1);
+            setHasAnsweredCurrentQuestion(answers[questionIndex + 1] !== undefined);
         }
     }
 
     const voltarPergunta = () => {
         if (questionIndex > 0) {
-            const previousIndex = questionIndex - 1;
-            const previousAnswer = answers[previousIndex];
-
-            if (previousAnswer && previousAnswer.isYes) {
-                const previousPoints = parseInt(data[previousIndex].pontos);
-                setTotalPoints(prevPoints => Math.max(0, prevPoints - previousPoints));
-            }
-
-            setQuestionIndex(previousIndex);
+            setQuestionIndex(questionIndex - 1);
+            setHasAnsweredCurrentQuestion(true); // Assume que ao voltar a pergunta anterior já foi respondida
         }
     };
 
     function handleAnswer(isYes) {
         const currentPoints = parseInt(data[questionIndex].pontos);
-        if (isYes) {
-            setTotalPoints(totalPoints + currentPoints);
+        const previousAnswer = answers[questionIndex];
+
+        if (!previousAnswer || previousAnswer.isYes !== isYes) {
+            if (isYes) {
+                setTotalPoints(prevPoints => prevPoints + currentPoints);
+            } else if (previousAnswer && previousAnswer.isYes) {
+                setTotalPoints(prevPoints => Math.max(0, prevPoints - currentPoints));
+            }
         }
+
         const newAnswers = [...answers];
         newAnswers[questionIndex] = { isYes };
         setAnswers(newAnswers);
+        setHasAnsweredCurrentQuestion(true);
 
         avancarPergunta();
     }
@@ -128,7 +131,7 @@ export default function Formulario() {
                 <Pressable onPress={voltarPergunta} isDisabled={questionIndex === 0}>
                     <Image source={SetaEsquerda} alt="Voltar" />
                 </Pressable>
-                <Pressable onPress={avancarPergunta} isDisabled={questionIndex === data.length - 1}>
+                <Pressable onPress={avancarPergunta} isDisabled={questionIndex === data.length - 1 || !hasAnsweredCurrentQuestion}>
                     <Image source={SetaDireita} alt="Avançar" />
                 </Pressable>
             </VStack>
