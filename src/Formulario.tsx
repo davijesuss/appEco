@@ -151,6 +151,11 @@ export default function Formulario() {
             <Box mt={5}>
                 <Text fontSize="lg" color="white">Pontos Acumulados: {totalPoints}</Text>
             </Box>
+            {questionIndex === data.length - 1 && (
+                <Button onPress={() => navigation.navigate('Conquista', { totalPoints })} mt={5}>
+                    Ver Resultado
+                </Button>
+            )}
             <Button onPress={() => navigation.navigate('Resultados', { pointsByCategory })} mt={5}>
                 Ver Pontos por Categoria
             </Button>

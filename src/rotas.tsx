@@ -5,11 +5,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Onboarding from './Onboarding';
 import Formulario from './Formulario';
 import Resultados from './Resultados';
+import Conquista from './Conquista';
 
 // Defina os tipos das rotas
 export type RootStackParamList = {
   Onboarding: undefined;
   Formulario: undefined;
+  Conquista: { totalPoints: number };
   Resultados: { pointsByCategory: { [key: string]: number } };
 };
 
@@ -27,6 +29,11 @@ export default function Rotas() {
                 <Stack.Screen
                     name="Formulario"
                     component={Formulario}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name="Conquista"
+                    component={Conquista}
                     options={{ headerShown: false }}
                 />
                 <Stack.Screen
