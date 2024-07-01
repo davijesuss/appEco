@@ -12,7 +12,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "02",
@@ -27,7 +28,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "006",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "03",
@@ -42,7 +44,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "003",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "04",
@@ -57,7 +60,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "014",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "05",
@@ -72,7 +76,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "06",
@@ -87,7 +92,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "016",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "07",
@@ -102,7 +108,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "010",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "08",
@@ -117,7 +124,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "012",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "09",
@@ -132,7 +140,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "007",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "10",
@@ -147,7 +156,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "007",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "11",
@@ -162,7 +172,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "006",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "12",
@@ -177,7 +188,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "13",
@@ -192,7 +204,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "14",
@@ -207,7 +220,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "003",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "15",
@@ -222,7 +236,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "003",
-      "cor": "0c7cbaff"
+      "cor": "0c7cbaff",
+      "pontosTotais": "99"
     },
     {
       "id": "16",
@@ -267,7 +282,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "010",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "19",
@@ -282,7 +298,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "20",
@@ -297,7 +314,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "21",
@@ -312,7 +330,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "005",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "22",
@@ -327,7 +346,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "016",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "23",
@@ -342,7 +362,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "016",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "24",
@@ -357,7 +378,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "005",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "25",
@@ -372,7 +394,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "26",
@@ -387,7 +410,8 @@
       "observacoes": "[null]",
       "exemplos": "O QUE UMA JANELA PRECISA TER PARA UM BOM DESEMPENHO TÉRMICO E LUMÍNICO?\n- Proporcionar escurecimento;\n- Proporcionar uma boa ventilação natural e iluminação natural;\n- Proteger o ambiente da chuva e vento;\n- Propiciar sombreamento no verão e no inverno permitir a entrada do sol;\n- Ser possível de ser vedada durante a ausência dos usuários.",
       "pontos": "004",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "27",
@@ -402,7 +426,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "006",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "28",
@@ -417,7 +442,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "005",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "29",
@@ -432,7 +458,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "30",
@@ -447,7 +474,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "31",
@@ -462,7 +490,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "005",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "32",
@@ -477,7 +506,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "006",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "33",
@@ -492,7 +522,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "008",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "34",
@@ -507,7 +538,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "35",
@@ -522,7 +554,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "36",
@@ -537,7 +570,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "003",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "37",
@@ -552,7 +586,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "38",
@@ -567,7 +602,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "006",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "39",
@@ -582,7 +618,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "008",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "40",
@@ -597,7 +634,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "015",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "41",
@@ -612,7 +650,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "010",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "42",
@@ -627,7 +666,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "005",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "43",
@@ -642,7 +682,8 @@
       "observacoes": "A envoltória sempre é avaliada para a edificação como um todo e é obrigatória para obtenção das ENCEs parciais do sistema de iluminação e condicionamento de ar.",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "44",
@@ -657,7 +698,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "6c8800ff"
+      "cor": "6c8800ff",
+      "pontosTotais": "184"
     },
     {
       "id": "45",
@@ -672,7 +714,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "6c8800ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "184"
     },
     {
       "id": "46",
@@ -687,7 +730,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "47",
@@ -702,7 +746,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "48",
@@ -717,7 +762,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "006",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "49",
@@ -732,7 +778,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "50",
@@ -747,7 +794,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "51",
@@ -762,7 +810,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "52",
@@ -777,7 +826,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "53",
@@ -792,7 +842,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "54",
@@ -807,7 +858,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "003",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "55",
@@ -822,7 +874,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "010",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "56",
@@ -837,7 +890,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "57",
@@ -852,7 +906,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "58",
@@ -867,7 +922,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "003",
-      "cor": "c92d39ff"
+      "cor": "c92d39ff",
+      "pontosTotais": "48"
     },
     {
       "id": "59",
@@ -882,7 +938,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "010",
-      "cor": "975713ff"
+      "cor": "975713ff",
+      "pontosTotais": "74"
     },
     {
       "id": "60",
@@ -1092,7 +1149,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "004",
-      "cor": "fcc438ff"
+      "cor": "fcc438ff",
+      "pontosTotais": "33"
     },
     {
       "id": "74",
@@ -1107,7 +1165,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "010",
-      "cor": "ef8d22ff"
+      "cor": "ef8d22ff",
+      "pontosTotais": "26"
     },
     {
       "id": "75",
@@ -1152,7 +1211,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "002",
-      "cor": "5e5e5eff"
+      "cor": "5e5e5eff",
+      "pontosTotais": "20"
     },
     {
       "id": "78",
@@ -1272,7 +1332,8 @@
       "observacoes": "[null]",
       "exemplos": "[null]",
       "pontos": "100",
-      "cor": "4b5ac2ff"
+      "cor": "4b5ac2ff",
+      "pontosTotais": "245"
     },
     {
       "id": "86",

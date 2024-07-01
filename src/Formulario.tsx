@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 import { VStack, Box, Text, Button, Pressable, Heading, Image } from 'native-base';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+import { RootStackParamList } from './rotas'; // Importe o tipo RootStackParamList
 import SetaDireita from './assets/Circulo_Link_Direita.png';
 import SetaEsquerda from './assets/Circulo_Link_Esquerda.png';
 import Background from './style/Background';
@@ -12,8 +14,10 @@ const STORAGE_POINT = '@ponto';
 const STORAGE_ANSWERS = '@answers';
 
 export default function Formulario() {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
     const [questionIndex, setQuestionIndex] = useState(0);
     const [totalPoints, setTotalPoints] = useState(0);
+    const [pointsByCategory, setPointsByCategory] = useState<{ [key: string]: number }>({});
     const [answers, setAnswers] = useState([]);
     const [modalVisible, setModalVisible] = useState(false);
     const [hasAnsweredCurrentQuestion, setHasAnsweredCurrentQuestion] = useState(false);
@@ -25,7 +29,7 @@ export default function Formulario() {
     
     useEffect(() => {
         armazenarDados();
-    }, [totalPoints, answers, questionIndex]);
+    }, [totalPoints, answers, questionIndex, pointsByCategory]);
 
     const recuperarDados = async () => {
         try {
@@ -58,6 +62,7 @@ export default function Formulario() {
             await AsyncStorage.removeItem(STORAGE_ANSWERS);
             setTotalPoints(0);
             setAnswers([]);
+            setPointsByCategory({});
             console.log('Dados armazenados limpos.');
         } catch (error) {
             console.error('Erro ao limpar os dados:', error);
@@ -89,8 +94,16 @@ export default function Formulario() {
         if (!previousAnswer || previousAnswer.isYes !== isYes) {
             if (isYes) {
                 setTotalPoints(prevPoints => prevPoints + currentPoints);
+                setPointsByCategory(prev => ({
+                    ...prev,
+                    [data[questionIndex].categoria]: (prev[data[questionIndex].categoria] || 0) + currentPoints
+                }));
             } else if (previousAnswer && previousAnswer.isYes) {
                 setTotalPoints(prevPoints => Math.max(0, prevPoints - currentPoints));
+                setPointsByCategory(prev => ({
+                    ...prev,
+                    [data[questionIndex].categoria]: (prev[data[questionIndex].categoria] || 0) - currentPoints
+                }));
             }
         }
 
@@ -106,7 +119,7 @@ export default function Formulario() {
         const color = data[questionIndex]?.cor || '0C7CBA';
         return `#${color.substring(0, 6)}`;
     };
-    
+
     return (
         <VStack style={[Background.containerAzul, { backgroundColor: getBackgroundColor() }]} alignItems="center" justifyContent="center" p={5}>
             <Box bg="white" p={4} borderRadius="lg" maxWidth="90%" width={{ base: "95%", md: "85%", lg: "70%" }} height="auto" justifyContent="center" alignItems="center">
@@ -138,6 +151,14 @@ export default function Formulario() {
             <Box mt={5}>
                 <Text fontSize="lg" color="white">Pontos Acumulados: {totalPoints}</Text>
             </Box>
+            {questionIndex === data.length - 1 && (
+                <Button onPress={() => navigation.navigate('Conquista', { totalPoints })} mt={5}>
+                    Ver Resultado
+                </Button>
+            )}
+            <Button onPress={() => navigation.navigate('Resultados', { pointsByCategory })} mt={5}>
+                Ver Pontos por Categoria
+            </Button>
         </VStack>
     );
 }
