@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { VStack, Button, Text } from 'native-base';
-import { RouteProp, useRoute, useNavigation } from '@react-navigation/native';
-import { RootStackParamList } from './rotas';
+import { useRoute, useNavigation } from '@react-navigation/native';
 import { Video } from 'expo-av';
 import OuroVideo from './assets/Ouro.mp4';
 import PrataVideo from './assets/Prata.mp4';
 import BronzeVideo from './assets/Bronze.mp4';
 
 export default function Conquista() {
-    const route = useRoute<ConquistaRouteProp>();
+    const route = useRoute();
     const navigation = useNavigation();
     const { totalPoints } = route.params;
     const videoRef = useRef<Video>(null);
