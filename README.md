@@ -16,18 +16,15 @@ Nosso objetivo é incentivar a sustentabilidade urbana através de descontos no 
 
 O questionário foi projetado para calcular a pontuação de cada solicitante com base na aplicação dos requisitos do Programa de Certificação Sustentável "IPTU Verde". Ao final do questionário, a pontuação total será apresentada, categorizando o solicitante em um dos níveis de desoneração tributária: Bronze, Prata ou Ouro.
 
-## Estrutura do Projeto
-
-O projeto é dividido nas seguintes principais partes:
-
-- **Frontend**: Desenvolvido com Expo e TypeScript, permitindo a criação de uma interface de usuário amigável e responsiva.
-- **Backend**: Construído usando Node.js, gerencia as requisições do aplicativo e armazena os dados do questionário.
-
 ## Tecnologias Utilizadas
 
 - **Expo**: Para a criação e desenvolvimento da aplicação móvel.
-- **Node.js**: Para o backend, responsável pelo processamento das respostas do questionário e gerenciamento da pontuação.
 - **TypeScript**: Utilizado tanto no frontend quanto no backend para garantir tipagem estática e aumentar a robustez do código.
+- **React Native**: Escolhido como framework principal para desenvolvimento de aplicativos
+móveis nativos
+- **Native Base**: Integrado para aproveitar os componentes UI pré-estilizados e
+personalizáveis
+- **AsyncStorage**: Utilizado para o armazenamento local
 
 ## Instalação e Uso
 
